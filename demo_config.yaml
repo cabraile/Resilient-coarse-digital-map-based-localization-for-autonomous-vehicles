@@ -1,0 +1,39 @@
+# More information on how to set up this yaml in https://github.com/cabraile/Human-made-Map-based-Localization-Proto
+
+map:
+    route0: "/absolute/path/to/map/routes/init_route.yaml" # The path to the initial planned route
+    route1: "/absolute/path/to/map/routes/branch_alexandrina.yaml" # The path to route id 1 - order does not matter
+    route2: "/absolute/path/to/map/routes/branch_sao_sebastiao.yaml" # The path to route id 2 - order does not matter
+    route3: "/absolute/path/to/map/routes/branch_serafim_vieira.yaml" # The path to route id 3 - order does not matter
+    branch1: [-22.01233,-47.89182,1]
+    branch2: [-22.01322,-47.88981,2]
+    branch3: [-22.00964,-47.90088,3]
+
+dataset:
+    ignore_before_timestamp: 1606589686447952032 
+
+filter:
+    prune_threshold: 0.75
+    initial_position: 0.0
+    initial_variance: 100.0
+ 
+visualization:
+    skip_n_iters: 200
+    zoom_radius: 50
+ 
+sensor:
+    msgs:
+        groundtruth: "/absolute/path/to/data/gps_filtered.csv"
+        odometer:    "/absolute/path/to/data/odom.csv"
+        image:       "/absolute/path/to/data/images.csv"
+        compass:     "/absolute/path/to/data/orientation.csv"
+        
+    settings:
+        # conservative setting
+        landmark_matching_threshold: 0.41
+        landmark_matching_sensitivity: 0.75
+        landmark_matching_fpr: 0.15
+        sign_recognition_threshold: 0.89
+        sign_recognition_sensitivity: 0.8
+        sign_recognition_fpr: 0.1
+        model: "vgg16"
