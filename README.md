@@ -1,6 +1,6 @@
 About
 ===========================================
-This repository contains the source code and documentation of the method proposed in the paper **Resilient coarse digital map-based localization for autonomous vehicles with route uncertainty management** submitted to the ACM Transactions of Intelligent Systems and Technology (TIST) in January, 2021.
+This repository contains the source code and documentation of the method proposed in the paper **Digital map-based localization for autonomous vehicles with route uncertainty management** submitted to the Journal of Field Robotics in February, 2021.
 
 In this project, we propose performing global localization for autonomous vehicles using odometry and coarse digital maps. Two types of features are used for the proposed localization method: landmarks and segment features.
 ![landmark_localization](img/landmark_localization.png)
